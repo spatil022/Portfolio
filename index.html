@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shamal | Software Developer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0d0d0d;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #0d0d0d;
+        }
+
+        header nav a {
+            color: #66fcf1;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .main-content h1 {
+            font-size: 3rem;
+            margin: 20px 0;
+        }
+
+        .main-content p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+
+        .main-content .social-icons {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .main-content .social-icons a {
+            position: relative;
+            margin: 0 15px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: #1f2833;
+            color: #66fcf1;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .main-content .social-icons a:hover {
+            transform: scale(1.2);
+            background-color: #66fcf1;
+            color: #0d0d0d;
+        }
+
+        .main-content .social-icons a::after {
+            content: attr(data-popup);
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #66fcf1;
+            color: #0d0d0d;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .main-content .social-icons a:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .main-content .get-in-touch {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 30px;
+            border: 2px solid #66fcf1;
+            color: #66fcf1;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+        }
+
+        .main-content .get-in-touch:hover {
+            background-color: #66fcf1;
+            color: #0d0d0d;
+        }
+
+        .skills-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #0d0d0d;
+        }
+
+        .skills-section h2 {
+            font-size: 2.5rem;
+            color: #66fcf1;
+            margin-bottom: 20px;
+        }
+
+        .skills-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            padding: 0 40px;
+            max-width: calc(100% - 60px);
+        }
+
+        .skills-grid div {
+            position: relative;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .skills-grid div:hover {
+            transform: scale(1.1);
+            background-color: rgba(102, 252, 241, 0.1);
+        }
+
+        .skills-grid img {
+            width: 100px; /* Increased size for visibility */
+            height: 100px; /* Increased size for visibility */
+            margin-bottom: 10px;
+        }
+
+        .skills-grid .shell-script {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Bash_Logo_Colored.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 120px; /* Increased size for visibility */
+            height: 120px; /* Increased size for visibility */
+            margin: 0 auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #0d0d0d;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #66fcf1;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1 style="color: #66fcf1; font-size: 2rem;">$</h1>
+        </div>
+        <nav>
+            <a href="#home">HOME</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#projects">PROJECTS</a>
+        </nav>
+    </header>
+
+    <div class="main-content" id="home">
+        <h2>LET'S DEVELOP SOMETHING AMAZING TOGETHER</h2>
+        <h1>
+            <span role="img" aria-label="wave">&#128075;</span>, I'm <span style="color: #66fcf1;">Shamal</span><br>
+            Software Developer
+        </h1>
+        <p>I'm a Software Developer with a passion for learning new technologies and problem-solving techniques</p>
+
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/shamalpatil/" target="_blank" data-popup="LinkedIn">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 24px; height: 24px;">
+            </a>
+            <a href="https://github.com/spatil022" target="_blank" data-popup="GitHub">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width: 24px; height: 24px;">
+            </a>
+            <a href="#" target="_blank" data-popup="Portfolio">
+                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055672.png" alt="Portfolio" style="width: 24px; height: 24px;">
+            </a>
+            <a href="#" target="_blank" data-popup="Contact">
+                <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="Contact" style="width: 24px; height: 24px;">
+            </a>
+        </div>
+
+        <a href="#" class="get-in-touch">GET IN TOUCH</a>
+    </div>
+
+    <div class="skills-section" id="skills">
+        <h2>SKILLS</h2>
+        <h3>What I Can Do</h3>
+        <div class="skills-grid">
+            <div data-popup="Docker">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+                <p>Docker</p>
+            </div>
+            <div data-popup="Kubernetes">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes">
+                <p>Kubernetes</p>
+            </div>
+            <!-- New AWS Image (high visibility) -->
+            <div data-popup="AWS">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS">
+                <p>AWS</p>
+            </div>
+            <div data-popup="Python">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                <p>Python</p>
+            </div>
+            <!-- New Shell Script Image -->
+            <div data-popup="Shell Script">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Shell Script">
+                <p>Shell Script</p>
+            </div>            
+            
+            <div data-popup="Terraform">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform">
+                <p>Terraform</p>
+            </div>
+            <div data-popup="Jenkins">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins">
+                <p>Jenkins</p>
+            </div>
+            <div data-popup="GitLab">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab">
+                <p>GitLab</p>
+            </div>
+            <div data-popup="Grafana">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" alt="Grafana">
+                <p>Grafana</p>
+            </div>
+            <div data-popup="Prometheus">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" alt="Prometheus">
+                <p>Prometheus</p>
+            </div>
+            <div data-popup="Ansible">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" alt="Ansible">
+                <p>Ansible</p>
+            </div>
+            <div data-popup="Python Boto3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Boto3">
+                <p>Python Boto3</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024, Built with <span style="color: red;">&#10084;</span> by Shamal Patil</p>
+    </footer>
+</body>
+</html>
